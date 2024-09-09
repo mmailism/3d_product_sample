@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    font-family: "Vollkorn", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body{
+    background-image: url(/img/bg.jpg);
+    background-size: cover;
+}
+
+header{
+    h1{
+        font-size: 7rem;
+        color: white;
+        margin: 0;
+        padding: 5% 5% 0 5%;
+        position: relative;
+        text-align: center;
+    }
+}
+
+.banner{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .products{
+        /* background-color: red; */
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        bottom: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        transition: 0.7s;
+        --left: 0px;
+        display: flex;
+
+        .soda{
+            background: 
+                var(--url) var(--left) 0,
+                url(/img/tin-can-set.png);
+            background-size: auto 100%;
+            width: 280px;
+            aspect-ratio: 2 / 4;
+            background-blend-mode: multiply;
+            mask-image: url(/img/tin-can-set.png);
+            mask-size: auto 100%;
+            transition: 0.7s;
+        }
+        &:hover{
+            --left: -1000px;
+        }
+    }
+}
